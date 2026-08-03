@@ -8,10 +8,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
         body { font-family: 'Space Grotesk', sans-serif; }
-        .photo-container {
-            width: 100%;
-            height: 500px;
-        }
     </style>
 </head>
 <body class="bg-[#111] text-white">
@@ -25,7 +21,7 @@
         <main class="space-y-40">
             <script>
                 const locations = [
-                    {name: "DVENADZAT' STUDIO", addr: "БЕРЕЖКОВСКАЯ НАБЕРЕЖНАЯ, 20С5", desc: "ЭТАЛОН МИНИМАЛИЗМА. ВЫСОКИЕ ПОТОЛКИ, АРХИТЕКТУРНЫЙ СВЕТ И СТЕРИЛЬНОСТЬ.", img: "https://ibb.co/nq0SRrkV"},
+                    {name: "DVENADZAT' STUDIO", addr: "БЕРЕЖКОВСКАЯ НАБЕРЕЖНАЯ, 20С5", desc: "ЭТАЛОН МИНИМАЛИЗМА. ВЫСОКИЕ ПОТОЛКИ, АРХИТЕКТУРНЫЙ СВЕТ И СТЕРИЛЬНОСТЬ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+1"},
                     {name: "СУПЕРМЕТАЛЛ", addr: "2-Я БАУМАНСКАЯ УЛ., 9/23С3", desc: "ГРУБЫЙ ИНДУСТРИАЛЬНЫЙ ШИК В ЕГО ПИКОВОМ ПРОЯВЛЕНИИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+2"},
                     {name: "ГЭС-2", addr: "БОЛОТНАЯ НАБЕРЕЖНАЯ, 15", desc: "КУЛЬТОВОЕ ПРОСТРАНСТВО, ГДЕ АРХИТЕКТУРА ИГРАЕТ С ТЕНЯМИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+3"},
                     {name: "ПАРК ЗАРЯДЬЕ", addr: "ВАРВАРКА, 6", desc: "ФУТУРИСТИЧНЫЕ ЛИНИИ ПАРИЩЕГО МОСТА И СЛОЖНЫЙ ЛАНДШАФТ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+4"},
@@ -50,87 +46,7 @@
                 locations.forEach((loc, i) => {
                     document.write(`
                         <section class="grid lg:grid-cols-2 gap-16 items-center group">
-                            <div class="overflow-hidden bg-[#222] photo-container relative shadow-2xl">
-                                <img src="${loc.img}" alt="${loc.name}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
-                            </div>
-                            <div class="flex flex-col justify-center">
-                                <span class="text-xs text-gray-500 mb-4 tracking-[0.2em]">0${i+1} // LOCATION</span>
-                                <h2 class="text-4xl md:text-5xl font-bold mb-6 uppercase tracking-tight leading-none">${loc.name}</h2>
-                                <p class="text-gray-400 text-sm mb-8 font-medium">${loc.addr}</p>
-                                <p class="text-gray-300 text-lg leading-relaxed font-light">${loc.desc}</p>
-                            </div>
-                        </section>
-                    `);
-                });
-            </script>
-        </main>
-
-        <footer class="mt-48 pt-24 border-t border-gray-800 text-center">
-            <p class="mb-10 text-gray-400 uppercase tracking-widest text-sm">ГОТОВА СОЗДАТЬ СВОЮ ИСТОРИЮ?</p>
-            <a href="https://t.me/Cuiprodest13" target="_blank" class="inline-block py-6 px-12 border border-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
-                ЗАБРОНИРОВАТЬ СЪЕМКУ
-            </a>
-        </footer>
-    </div>
-</body>
-</html>                    {name: "ХОХЛОВКА", addr: "ХОХЛОВСКИЙ ПЕР.", desc: "СЕРДЦЕ ТВОРЧЕСКОЙ МОСКВЫ. КИРПИЧНЫЕ СТЕНЫ И ГРАНЖ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+9"},
-                    {name: "МУЗЕОН", addr: "КРЫМСКИЙ ВАЛ, 2", desc: "ПРОСТРАНСТВО СВОБОДЫ. МИНИМАЛИСТИЧНЫЕ ПЛОЩАДКИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+10"},
-                    {name: "АВИАПАРК (АТРИУМ)", addr: "ХОДЫНСКИЙ Б-Р, 4", desc: "МАСШТАБ, ОТ КОТОРОГО ЗАХВАТЫВАЕТ ДУХ. ЛИНЕЙНЫЕ КОНСТРУКЦИИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+11"},
-                    {name: "ПАРК ГОРЬКОГО", addr: "КРЫМСКИЙ ВАЛ, 9", desc: "КЛАССИКА, КОТОРАЯ НЕ СТАРЕЕТ. ЭЛЕГАНТНЫЕ АЛЛЕИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+12"},
-                    {name: "АРХИТЕКТУРНАЯ ШКОЛА МАРШ", addr: "НИЖНЯЯ СЫРОМЯТНИЧЕСКАЯ", desc: "ЛОФТ-ЭСТЕТИКА В ЧИСТОМ ВИДЕ. МНОГО БЕТОНА И СТЕКЛА.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+13"},
-                    {name: "НОВОДЕВИЧИЙ МОНАСТЫРЬ", addr: "НОВОДЕВИЧИЙ ПР., 1", desc: "МЕСТО С ОСОБОЙ ЭНЕРГЕТИКОЙ И ИСТОРИЧЕСКИМ ШАРМОМ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+14"},
-                    {name: "МОСКВА-СИТИ (НАБЕРЕЖНАЯ)", addr: "ПРЕСНЕНСКАЯ НАБ.", desc: "МАКСИМАЛЬНЫЙ РИТМ МЕГАПОЛИСА. СТЕКЛО И ВЫСОТКИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+15"},
-                    {name: "ДОМ НАРКОМФИНА", addr: "НОВИНСКИЙ Б-Р, 25", desc: "ЛЕГЕНДА СОВЕТСКОГО КОНСТРУКТИВИЗМА. МИНИМАЛИЗМ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+16"},
-                    {name: "САД ЭРМИТАЖ", addr: "КАРЕТНЫЙ РЯД, 3", desc: "ИЗЯЩЕСТВО И УЮТ. ОСТРОВОК СПОКОЙСТВИЯ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+17"},
-                    {name: "ВИНЗАВОД", addr: "4-Й СЫРОМЯТНИЧЕСКИЙ ПЕР.", desc: "ГРАНЖ И СОВРЕМЕННОЕ ИСКУССТВО. СИЛЬНЫЙ ХАРАКТЕР.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+18"},
-                    {name: "УЛИЦА ПРЕЧИСТЕНКА", addr: "ПРЕЧИСТЕНКА", desc: "БЛАГОРОДСТВО В ДЕТАЛЯХ. СТАРЫЕ ОСОБНЯКИ МОСКВЫ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+19"},
-                    {name: "ПАТРИАРШИЕ ПРУДЫ", addr: "МАЛЫЙ КОЗИХИНСКИЙ", desc: "ТИХАЯ РОСКОШЬ И БЕЗУПРЕЧНЫЙ СТИЛЬ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+20"}
-                ];
-
-                locations.forEach((loc, i) => {
-                    document.write(`
-                        <section class="grid lg:grid-cols-2 gap-16 items-center group">
-                            <div class="overflow-hidden bg-[#222] photo-container relative shadow-2xl">
-                                <img src="${loc.img}" alt="${loc.name}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
-                            </div>
-                            <div class="flex flex-col justify-center">
-                                <span class="text-xs text-gray-500 mb-4 tracking-[0.2em]">0${i+1} // LOCATION</span>
-                                <h2 class="text-4xl md:text-5xl font-bold mb-6 uppercase tracking-tight leading-none">${loc.name}</h2>
-                                <p class="text-gray-400 text-sm mb-8 font-medium">${loc.addr}</p>
-                                <p class="text-gray-300 text-lg leading-relaxed font-light">${loc.desc}</p>
-                            </div>
-                        </section>
-                    `);
-                });
-            </script>
-        </main>
-
-        <footer class="mt-48 pt-24 border-t border-gray-800 text-center">
-            <p class="mb-10 text-gray-400 uppercase tracking-widest text-sm">ГОТОВА СОЗДАТЬ СВОЮ ИСТОРИЮ?</p>
-            <a href="https://t.me/Cuiprodest13" target="_blank" class="inline-block py-6 px-12 border border-white hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
-                ЗАБРОНИРОВАТЬ СЪЕМКУ
-            </a>
-        </footer>
-    </div>
-</body>
-</html>                    {name: "ХОХЛОВКА", addr: "ХОХЛОВСКИЙ ПЕР.", desc: "СЕРДЦЕ ТВОРЧЕСКОЙ МОСКВЫ. КИРПИЧНЫЕ СТЕНЫ И ГРАНЖ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+9"},
-                    {name: "МУЗЕОН", addr: "КРЫМСКИЙ ВАЛ, 2", desc: "ПРОСТРАНСТВО СВОБОДЫ. МИНИМАЛИСТИЧНЫЕ ПЛОЩАДКИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+10"},
-                    {name: "АВИАПАРК (АТРИУМ)", addr: "ХОДЫНСКИЙ Б-Р, 4", desc: "МАСШТАБ, ОТ КОТОРОГО ЗАХВАТЫВАЕТ ДУХ. ЛИНЕЙНЫЕ КОНСТРУКЦИИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+11"},
-                    {name: "ПАРК ГОРЬКОГО", addr: "КРЫМСКИЙ ВАЛ, 9", desc: "КЛАССИКА, КОТОРАЯ НЕ СТАРЕЕТ. ЭЛЕГАНТНЫЕ АЛЛЕИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+12"},
-                    {name: "АРХИТЕКТУРНАЯ ШКОЛА МАРШ", addr: "НИЖНЯЯ СЫРОМЯТНИЧЕСКАЯ", desc: "ЛОФТ-ЭСТЕТИКА В ЧИСТОМ ВИДЕ. МНОГО БЕТОНА И СТЕКЛА.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+13"},
-                    {name: "НОВОДЕВИЧИЙ МОНАСТЫРЬ", addr: "НОВОДЕВИЧИЙ ПР., 1", desc: "МЕСТО С ОСОБОЙ ЭНЕРГЕТИКОЙ И ИСТОРИЧЕСКИМ ШАРМОМ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+14"},
-                    {name: "МОСКВА-СИТИ (НАБЕРЕЖНАЯ)", addr: "ПРЕСНЕНСКАЯ НАБ.", desc: "МАКСИМАЛЬНЫЙ РИТМ МЕГАПОЛИСА. СТЕКЛО И ВЫСОТКИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+15"},
-                    {name: "ДОМ НАРКОМФИНА", addr: "НОВИНСКИЙ Б-Р, 25", desc: "ЛЕГЕНДА СОВЕТСКОГО КОНСТРУКТИВИЗМА. МИНИМАЛИЗМ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+16"},
-                    {name: "САД ЭРМИТАЖ", addr: "КАРЕТНЫЙ РЯД, 3", desc: "ИЗЯЩЕСТВО И УЮТ. ОСТРОВОК СПОКОЙСТВИЯ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+17"},
-                    {name: "ВИНЗАВОД", addr: "4-Й СЫРОМЯТНИЧЕСКИЙ ПЕР.", desc: "ГРАНЖ И СОВРЕМЕННОЕ ИСКУССТВО. СИЛЬНЫЙ ХАРАКТЕР.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+18"},
-                    {name: "УЛИЦА ПРЕЧИСТЕНКА", addr: "ПРЕЧИСТЕНКА", desc: "БЛАГОРОДСТВО В ДЕТАЛЯХ. СТАРЫЕ ОСОБНЯКИ МОСКВЫ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+19"},
-                    {name: "ПАТРИАРШИЕ ПРУДЫ", addr: "МАЛЫЙ КОЗИХИНСКИЙ", desc: "ТИХАЯ РОСКОШЬ И БЕЗУПРЕЧНЫЙ СТИЛЬ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+20"}
-                ];
-
-                locations.forEach((loc, i) => {
-                    document.write(`
-                        <section class="grid lg:grid-cols-2 gap-16 items-center group">
-                            <div class="overflow-hidden bg-[#222] photo-container relative shadow-2xl">
+                            <div class="overflow-hidden bg-[#222] aspect-[3/4] relative shadow-2xl">
                                 <img src="${loc.img}" alt="${loc.name}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                             </div>
                             <div class="flex flex-col justify-center">
