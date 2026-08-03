@@ -7,10 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap');
-        body { font-family: 'Space Grotesk', sans-serif; }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #111; color: white; }
     </style>
 </head>
-<body class="bg-[#111] text-white">
+<body class="antialiased">
 
     <div class="max-w-6xl mx-auto px-6 py-20">
         <header class="text-center mb-32">
@@ -21,33 +21,36 @@
         <main class="space-y-40">
             <script>
                 const locations = [
-                    {name: "DVENADZAT' STUDIO", addr: "БЕРЕЖКОВСКАЯ НАБЕРЕЖНАЯ, 20С5", desc: "ЭТАЛОН МИНИМАЛИЗМА. ВЫСОКИЕ ПОТОЛКИ, АРХИТЕКТУРНЫЙ СВЕТ И СТЕРИЛЬНОСТЬ.", img: "https://ibb.co/nq0SRrkV"},
-                    {name: "СУПЕРМЕТАЛЛ", addr: "2-Я БАУМАНСКАЯ УЛ., 9/23С3", desc: "ГРУБЫЙ ИНДУСТРИАЛЬНЫЙ ШИК В ЕГО ПИКОВОМ ПРОЯВЛЕНИИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+2"},
-                    {name: "ГЭС-2", addr: "БОЛОТНАЯ НАБЕРЕЖНАЯ, 15", desc: "КУЛЬТОВОЕ ПРОСТРАНСТВО, ГДЕ АРХИТЕКТУРА ИГРАЕТ С ТЕНЯМИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+3"},
-                    {name: "ПАРК ЗАРЯДЬЕ", addr: "ВАРВАРКА, 6", desc: "ФУТУРИСТИЧНЫЕ ЛИНИИ ПАРИЩЕГО МОСТА И СЛОЖНЫЙ ЛАНДШАФТ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+4"},
-                    {name: "МИУССКАЯ ПЛОЩАДЬ", addr: "МИУССКАЯ ПЛ.", desc: "АТМОСФЕРА СТАРОЙ МОСКВЫ С ЕВРОПЕЙСКИМ ПРИВКУСОМ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+5"},
-                    {name: "ДЕПО", addr: "ЛЕСНАЯ УЛ., 20", desc: "ДИНАМИКА БОЛЬШОГО ГОРОДА И ЖИЗНЬ В КАЖДОМ КАДРЕ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+6"},
-                    {name: "П-ОБРАЗНЫЙ ДОМ", addr: "УЛ. ЛЕСТЕВА", desc: "ГЕОМЕТРИЧЕСКИЙ РАЙ ДЛЯ ПЕРФЕКЦИОНИСТА. ЧЕТКИЕ ЛИНИИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+7"},
-                    {name: "БИБЛИОТЕКА ЛЕНИНА", addr: "ВОЗДВИЖЕНКА, 3/5", desc: "МОНУМЕНТАЛЬНОСТЬ И АКАДЕМИЧЕСКОЕ ВЕЛИЧИЕ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+8"},
-                    {name: "ХОХЛОВКА", addr: "ХОХЛОВСКИЙ ПЕР.", desc: "СЕРДЦЕ ТВОРЧЕСКОЙ МОСКВЫ. КИРПИЧНЫЕ СТЕНЫ И ГРАНЖ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+9"},
-                    {name: "МУЗЕОН", addr: "КРЫМСКИЙ ВАЛ, 2", desc: "ПРОСТРАНСТВО СВОБОДЫ. МИНИМАЛИСТИЧНЫЕ ПЛОЩАДКИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+10"},
-                    {name: "АВИАПАРК (АТРИУМ)", addr: "ХОДЫНСКИЙ Б-Р, 4", desc: "МАСШТАБ, ОТ КОТОРОГО ЗАХВАТЫВАЕТ ДУХ. ЛИНЕЙНЫЕ КОНСТРУКЦИИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+11"},
-                    {name: "ПАРК ГОРЬКОГО", addr: "КРЫМСКИЙ ВАЛ, 9", desc: "КЛАССИКА, КОТОРАЯ НЕ СТАРЕЕТ. ЭЛЕГАНТНЫЕ АЛЛЕИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+12"},
-                    {name: "АРХИТЕКТУРНАЯ ШКОЛА МАРШ", addr: "НИЖНЯЯ СЫРОМЯТНИЧЕСКАЯ", desc: "ЛОФТ-ЭСТЕТИКА В ЧИСТОМ ВИДЕ. МНОГО БЕТОНА И СТЕКЛА.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+13"},
-                    {name: "НОВОДЕВИЧИЙ МОНАСТЫРЬ", addr: "НОВОДЕВИЧИЙ ПР., 1", desc: "МЕСТО С ОСОБОЙ ЭНЕРГЕТИКОЙ И ИСТОРИЧЕСКИМ ШАРМОМ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+14"},
-                    {name: "МОСКВА-СИТИ (НАБЕРЕЖНАЯ)", addr: "ПРЕСНЕНСКАЯ НАБ.", desc: "МАКСИМАЛЬНЫЙ РИТМ МЕГАПОЛИСА. СТЕКЛО И ВЫСОТКИ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+15"},
-                    {name: "ДОМ НАРКОМФИНА", addr: "НОВИНСКИЙ Б-Р, 25", desc: "ЛЕГЕНДА СОВЕТСКОГО КОНСТРУКТИВИЗМА. МИНИМАЛИЗМ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+16"},
-                    {name: "САД ЭРМИТАЖ", addr: "КАРЕТНЫЙ РЯД, 3", desc: "ИЗЯЩЕСТВО И УЮТ. ОСТРОВОК СПОКОЙСТВИЯ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+17"},
-                    {name: "ВИНЗАВОД", addr: "4-Й СЫРОМЯТНИЧЕСКИЙ ПЕР.", desc: "ГРАНЖ И СОВРЕМЕННОЕ ИСКУССТВО. СИЛЬНЫЙ ХАРАКТЕР.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+18"},
-                    {name: "УЛИЦА ПРЕЧИСТЕНКА", addr: "ПРЕЧИСТЕНКА", desc: "БЛАГОРОДСТВО В ДЕТАЛЯХ. СТАРЫЕ ОСОБНЯКИ МОСКВЫ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+19"},
-                    {name: "ПАТРИАРШИЕ ПРУДЫ", addr: "МАЛЫЙ КОЗИХИНСКИЙ", desc: "ТИХАЯ РОСКОШЬ И БЕЗУПРЕЧНЫЙ СТИЛЬ.", img: "https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+20"}
+                    {name: "DVENADZAT' STUDIO", addr: "БЕРЕЖКОВСКАЯ НАБЕРЕЖНАЯ, 20С5", desc: "ЭТАЛОН МИНИМАЛИЗМА. ВЫСОКИЕ ПОТОЛКИ, АРХИТЕКТУРНЫЙ СВЕТ.", img: https://ibb.co/nq0SRrkV},
+                    {name: "СУПЕРМЕТАЛЛ", addr: "2-Я БАУМАНСКАЯ УЛ., 9/23С3", desc: "ГРУБЫЙ ИНДУСТРИАЛЬНЫЙ ШИК В ЕГО ПИКОВОМ ПРОЯВЛЕНИИ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "ГЭС-2", addr: "БОЛОТНАЯ НАБЕРЕЖНАЯ, 15", desc: "КУЛЬТОВОЕ ПРОСТРАНСТВО, ГДЕ АРХИТЕКТУРА ИГРАЕТ С ТЕНЯМИ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "ПАРК ЗАРЯДЬЕ", addr: "ВАРВАРКА, 6", desc: "ФУТУРИСТИЧНЫЕ ЛИНИИ ПАРИЩЕГО МОСТА И СЛОЖНЫЙ ЛАНДШАФТ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "МИУССКАЯ ПЛОЩАДЬ", addr: "МИУССКАЯ ПЛ.", desc: "АТМОСФЕРА СТАРОЙ МОСКВЫ С ЕВРОПЕЙСКИМ ПРИВКУСОМ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "ДЕПО", addr: "ЛЕСНАЯ УЛ., 20", desc: "ДИНАМИКА БОЛЬШОГО ГОРОДА И ЖИЗНЬ В КАЖДОМ КАДРЕ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "П-ОБРАЗНЫЙ ДОМ", addr: "УЛ. ЛЕСТЕВА", desc: "ГЕОМЕТРИЧЕСКИЙ РАЙ ДЛЯ ПЕРФЕКЦИОНИСТА. ЧЕТКИЕ ЛИНИИ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "БИБЛИОТЕКА ЛЕНИНА", addr: "ВОЗДВИЖЕНКА, 3/5", desc: "МОНУМЕНТАЛЬНОСТЬ И АКАДЕМИЧЕСКОЕ ВЕЛИЧИЕ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "ХОХЛОВКА", addr: "ХОХЛОВСКИЙ ПЕР.", desc: "СЕРДЦЕ ТВОРЧЕСКОЙ МОСКВЫ. КИРПИЧНЫЕ СТЕНЫ И ГРАНЖ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "МУЗЕОН", addr: "КРЫМСКИЙ ВАЛ, 2", desc: "ПРОСТРАНСТВО СВОБОДЫ. МИНИМАЛИСТИЧНЫЕ ПЛОЩАДКИ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "АВИАПАРК (АТРИУМ)", addr: "ХОДЫНСКИЙ Б-Р, 4", desc: "МАСШТАБ, ОТ КОТОРОГО ЗАХВАТЫВАЕТ ДУХ. ЛИНЕЙНЫЕ КОНСТРУКЦИИ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "ПАРК ГОРЬКОГО", addr: "КРЫМСКИЙ ВАЛ, 9", desc: "КЛАССИКА, КОТОРАЯ НЕ СТАРЕЕТ. ЭЛЕГАНТНЫЕ АЛЛЕИ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "АРХИТЕКТУРНАЯ ШКОЛА МАРШ", addr: "НИЖНЯЯ СЫРОМЯТНИЧЕСКАЯ", desc: "ЛОФТ-ЭСТЕТИКА В ЧИСТОМ ВИДЕ. МНОГО БЕТОНА И СТЕКЛА.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "НОВОДЕВИЧИЙ МОНАСТЫРЬ", addr: "НОВОДЕВИЧИЙ ПР., 1", desc: "МЕСТО С ОСОБОЙ ЭНЕРГЕТИКОЙ И ИСТОРИЧЕСКИМ ШАРМОМ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "МОСКВА-СИТИ (НАБЕРЕЖНАЯ)", addr: "ПРЕСНЕНСКАЯ НАБ.", desc: "МАКСИМАЛЬНЫЙ РИТМ МЕГАПОЛИСА. СТЕКЛО И ВЫСОТКИ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "ДОМ НАРКОМФИНА", addr: "НОВИНСКИЙ Б-Р, 25", desc: "ЛЕГЕНДА СОВЕТСКОГО КОНСТРУКТИВИЗМА. МИНИМАЛИЗМ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "САД ЭРМИТАЖ", addr: "КАРЕТНЫЙ РЯД, 3", desc: "ИЗЯЩЕСТВО И УЮТ. ОСТРОВОК СПОКОЙСТВИЯ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "ВИНЗАВОД", addr: "4-Й СЫРОМЯТНИЧЕСКИЙ ПЕР.", desc: "ГРАНЖ И СОВРЕМЕННОЕ ИСКУССТВО. СИЛЬНЫЙ ХАРАКТЕР.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "УЛИЦА ПРЕЧИСТЕНКА", addr: "ПРЕЧИСТЕНКА", desc: "БЛАГОРОДСТВО В ДЕТАЛЯХ. СТАРЫЕ ОСОБНЯКИ МОСКВЫ.", img: "ССЫЛКА_НА_ФОТО"},
+                    {name: "ПАТРИАРШИЕ ПРУДЫ", addr: "МАЛЫЙ КОЗИХИНСКИЙ", desc: "ТИХАЯ РОСКОШЬ И БЕЗУПРЕЧНЫЙ СТИЛЬ.", img: "ССЫЛКА_НА_ФОТО"}
                 ];
 
                 locations.forEach((loc, i) => {
                     document.write(`
                         <section class="grid lg:grid-cols-2 gap-16 items-center group">
                             <div class="overflow-hidden bg-[#222] aspect-[3/4] relative shadow-2xl">
-                                <img src="${loc.img}" alt="${loc.name}" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
+                                <img src="${loc.img}" 
+                                     alt="${loc.name}" 
+                                     class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                                     onerror="this.src='https://placehold.co/800x1000/1a1a1a/444/png?text=PHOTO+${i+1}'">
                             </div>
                             <div class="flex flex-col justify-center">
                                 <span class="text-xs text-gray-500 mb-4 tracking-[0.2em]">0${i+1} // LOCATION</span>
